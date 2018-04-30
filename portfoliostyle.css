@@ -1,0 +1,26 @@
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  vertical-align: baseline;
+}
+
+li {
+  display: block;
+}
+
+.container {
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.about-section {
+  font-size: 36px
+}
