@@ -1,26 +1,269 @@
 
+body {
+  background-color: #f6e5e53d;
+}
+
+/*Header*/
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  background-color: #f6e5e53d;
+  height: 120px;
+}
+
+.logo-container {
+  width: 55px;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.name {
+  font: 35px "Alegreya Sans SC", sans-serif;
+  color: #000;
+  padding-left: 20px;
+}
+
+.separator {
+  height: 2px;
+  background: #f6e5e5a8;
+  width: 80%;
+}
+
+/*Navigation Bar*/
 .nav-list {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  font: 20px "Rock Salt", cursive;
+  padding: 2px 25px;
+  margin: 2px 0;
 }
 
-nav {
-  vertical-align: baseline;
+.nav-item {
+  padding: 35px;
+  text-decoration: none;
+  color: #362323;
+}
+/*End of Header*/
+
+/*Main Content Begins*/
+h2 {
+  font: 60px "Rock Salt", cursive;
+  color: #300;
+  padding: 35px 25px;
+  width: 90px;
+  transform: rotate(-7deg);
 }
 
-li {
+/*Who. Section*/
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.who-image-box {
+  width: 60%;
+  margin-left: 65px;
+}
+
+.code-image {
+  width: 100%;
+}
+
+.who-section {
+  text-align: justify;
   display: block;
 }
 
-.container {
-  display:flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  padding: 30px;
+/*What. Section*/
+.container2 {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
 }
 
-.about-section {
-  font-size: 36px
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+h3 {
+  text-align: center;
+}
+
+.project-link,
+.contact-message {
+  font: 30px "News Cycle", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.project-img-box {
+  width: 450px;
+  padding-right: 25px;
+}
+
+.project-img {
+  border-radius: 4px;
+  box-shadow: 1px -2px 12px 1px #bababa;
+  width: 100%;
+}
+
+.description-container {
+  padding-right: 25px;
+  width: 450px;
+  text-align: center;
+}
+
+/*Below p element styles to the text in the Who. Section as well*/
+p {
+  font: 20px "Signika Negative", sans-serif;
+  color: #4d0000;
+}
+
+button {
+  background-color: #e6e6ff;
+  color: #000066;
+  font: 15px 'Stylish', sans-serif;
+  border: 1px solid #ccccff;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 3px 8px;
+  margin: auto;
+}
+
+/*Footer*/
+.container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa {
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  width: 17px;
+  margin: 5px 10px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.6;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+/*Responsiveness*/
+@media screen and (min-width: 550px){
+  .nav-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .contact-message {font-size: 30px;
+  }
+  .who-section {width: 380px;
+  }
+}
+
+@media screen and (max-width: 549px){
+  .who-section {width: 240px;
+  }
+  .logo-container {
+    width: 10%;
+    padding: 5px 1px;
+  }
+  .name {
+    padding-left: 5px;
+    font-size: 29px;
+  }
+}
+
+@media screen and (max-width: 1068px){
+  .who-image-box {padding-bottom: 30px;
+  }
+  h2 {font-size: 45px;
+  }
+  .separator {width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 440px){
+  .project-img-box {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  .who-image-box {
+    width: 280px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 460px){
+  .project-img-box {width: 85%;
+  }
+  .description-container {width: 85%;
+  }
+}
+
+@media screen and (min-width: 461px) and (max-width: 530px){
+  .project-img-box {width: 75%;
+  }
+  .description-container {width: 75%;
+  }
+}
+
+@media screen and (min-width: 531px) and (max-width: 750px){
+  .project-img-box {width: 60%;
+  }
+  .description-container {width: 60%;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .container3 {flex-wrap: wrap;
+  }
+  .nav-list {font-size: 15px;
+  }
+  .nav-item {padding: 20px;
+  }
+  .project-link {font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 350px){
+  .contact-list {padding-left: 0px;
+  }
 }

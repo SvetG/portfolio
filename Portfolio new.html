@@ -2,33 +2,133 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="portfoliostyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="portfoliostyle.css">
+      <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|News+Cycle|Rock+Salt|Signika+Negative|Stylish" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Svetlana Gubina | Portfolio</title>
   </head>
   <body>
+    <!--Top header and logo-->
     <header>
-      <div class="name">Svetlana Gubina</div>
+        <div class="container">
+          <div class="logo-container">
+            <img class="logo" src="https://raw.githubusercontent.com/SvetG/portfolio/master/Images/logo.png" alt="Logo">
+          </div>
+          <div class="name">Svetlana Gubina</div>
+        </div>
+      <div class="separator"></div>
+    <!--Navigation bar. Flex-end in desktop viewport view-->
       <nav>
         <ul class="nav-list">
-          <li><a href="">About</a></li>
-          <li><a href="">Featured Work</a></li>
-          <li><a href="">Get in Touch</a></li>
+          <li><a href="#who" class="nav-item">Who</a></li>
+          <li><a href="#what" class="nav-item">What</a></li>
+          <li><a href="#where" class="nav-item">Where</a></li>
         </ul>
       </nav>
+      <div class="separator"></div>
     </header>
-    <main class="container">
-      <section class="about">
-        <div class="about-title">About.</div>
-        <div class="about-section">Copy copy copy copy copy copy copy copy copy</div>
+    <!--
+    Main content of the page. Divided as sections according to the navigation bar categories.
+    (Except for the "Where" info. This is added as a footer.)
+    -->
+    <main>
+      <section id="who">
+        <h2>Who.</h2>
+          <article class="container1">
+          <!--Container for the Who. section text and the image associated with the text-->
+            <div class="who-image-box">
+              <img class="code-image" src="https://raw.githubusercontent.com/SvetG/portfolio/master/Images/code%20image.png"
+              alt="Header Image">
+            </div>
+            <div class="who-section">
+              <p>
+                <strong>H</strong>i!
+              </p>
+              <p>
+                <strong>W</strong>elcome to my personal portfolio site, allow me to share
+                 a bit about myself. I am currently a Business Analyst and decided to commit
+                 myself to understanding what in the world my team of developers were on about.
+                 This is where coding comes in. I was lucky enough to recieve the UDACITY Google
+                 Front-End Developer Nanodegree Scholarship and I was off on a new journey in
+                 the foreign lands of HTML, CSS, and JavaScript.
+              </p>
+              <p>
+                <strong>B</strong>elow you will find a handful of my course projects.
+              </p>
+              <p>
+                <strong>T</strong>his list is sure to grow, as is the complexity of the projects.
+                Feel free to get in touch and stay as long as you like<strong>.</strong>
+              </p>
+            </div>
+          </article>
       </section>
-      <section class="featured-works">
-        <div class="featured-works-title">Featured Works.</div>
-        <div class="featured-works-section">
-          <div class="project-one">Project 1</div>
-          <div class="project-two">Project 2</div>
-          <div class="project-three">Project 3</div>
-          <div class="project-four">Project 4</div>
-          <div class="project-five">Project 5</div>
-        </div>
-      </section>
-      <!--/all site content here. About section, Featured Works section, and Contact section/-->
+      <!--
+      The following section is also divided into articles.
+      Each articles represents a project.
+      Space is left at the bottom to keep adding projects
+      -->
+      <section id="what">
+        <h2>What.</h2>
+          <article class="container2">
+          <!--Container for the displayed projects-->
+            <div class="project">
+              <div class="project-img-box">
+                <a href="https://codepen.io/gubinaS/full/Vxpxdz/" target="_blank" alt="Animal Trading Card Image">
+                  <img class="project-img" src="https://raw.githubusercontent.com/SvetG/portfolio/master/Images/project1-image.png" alt="Animal Trading Card Image">
+                </a>
+              </div>
+              <div class="description-container">
+                <h3><a class="project-link" href="https://codepen.io/gubinaS/full/Vxpxdz/" target="_blank">Animal Trading Card</a></h3>
+                  <p>
+                    This project started off as a simple HTML and CSS excersize mainly focused on
+                    the use of margins, borders, and padding. JavaScript code was later added to give
+                    the project a bit of extra flourish.
+                  </p>
+                  <button class="code-button" onclick=" window.open('https://codepen.io/gubinaS/pen/yKmRYo','_blank')">Access Code</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="container2">
+            <div class="project">
+              <div class="project-img-box">
+                <a href="https://codepen.io/gubinaS/full/jzRyXV/" target="_blank" alt="Pixel Art Maker Image">
+                  <img class="project-img" src="https://raw.githubusercontent.com/SvetG/portfolio/master/Images/project2-imagescaled.png" alt="Pixel Art Maker Image">
+                </a>
+              </div>
+              <div class="description-container">
+                <h3><a class="project-link" href="https://codepen.io/gubinaS/full/jzRyXV/" target="_blank">Pixel Art Maker</a></h3>
+                  <p>
+                    The first exercise in using JavaScript. Intended to be a fun project of creativity
+                    and color that engages the user.
+                  </p>
+                  <button class="code-button" onclick="window.open('https://codepen.io/gubinaS/pen/jzRyXV','_blank')">Access Code</button>
+              </div>
+            </div>
+          </article>
+        </section>
+
+      <!--<div class="project">Project 3</div>
+          <div class="project">Project 4</div>
+          <div class="project">Project 5</div>-->
+
+      <footer>
+        <h2 id="where">Where.</h2>
+          <div class="container3">
+            <p class="contact-message">Go On.</p>
+            <!--
+            a class attribute was intentionally used for the above p element
+            as it has some distinguishing responsiveness functionality from the
+            other p elements.
+            -->
+            <ul class="contact-list">
+              <li><a href="https://www.facebook.com/svetlana.gubina" target="_blank" class="fa fa-facebook"></a></li>
+              <li><a href="https://www.linkedin.com/in/svetlanagubina/" target="_blank" class="fa fa-linkedin"></a></li>
+              <li><a href="mailto:sgubina89@gmail.com" target="_blank" class="fa fa-google"></a></li>
+            </ul>
+          </div>
+      </footer>
+    </main>
+  </body>  
+</html>
